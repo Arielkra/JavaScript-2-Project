@@ -1,0 +1,183 @@
+<center>
+<style type="text/css">
+    body {
+        height: 100%;
+        background: linear-gradient(#1c595e 50%, white);
+        background-size: cover;
+         }
+
+    #bg {
+        margin: 0 auto;
+        padding: 0px;
+        width: 350px;
+        height: 380px;
+        background-color: #1c595e;
+
+        border-radius: 30px;
+        box-shadow: 1px 1px 20px 2px rgba(0, 0, 0, 0.2);
+        
+    }
+    #calculator {
+        margin-left: 30px;
+        margin-top: 80px;
+
+        padding-top: 30px;
+        
+    }
+    
+
+
+
+    .screen {
+        width: 140px;
+        height: 40px;
+        font-size: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1px;
+        box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2); 
+        font-size: 21px;
+         line-height: 60px;
+        color: black;
+        border:none;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        text-align: right;
+        letter-spacing: 1px;
+        border-radius: 10px;
+        
+    }
+    .button {
+        width: 70px;
+        height: 40px;
+        cursor: pointer;
+        border-radius: 30px;
+        border:none;
+        box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        font-size: 17px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .button:hover {
+        background-color: #FF9A08;
+    }
+    .button1 {
+        width: 70px;
+        height: 40px;
+        background-color: #4EB4B0;
+        cursor: pointer;
+        border:none;
+        border-radius: 30px;
+        box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        font-size: 17px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .button1:hover {
+        background-color: #F79E4C;
+    }
+    .buttonred {
+        width: 70px;
+        height: 40px;
+        background-color: #3B8E96;
+        cursor: pointer;
+        border:none;
+        border-radius: 30px;
+        box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        font-size: 17px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .buttonred:hover {
+        background-color: #F79E4C;
+    }
+    .buttonce {
+        width: 70px;
+        height: 40px;
+        background-color: #3B8E96;
+        cursor: pointer;
+        border:none;
+        border-radius: 30px;
+        box-shadow: 1px 2px rgba(0, 0, 0, 0.2);
+        font-size: 17px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+    .buttonce:hover {
+        background-color: #F79E4C;
+    }
+
+    #devname{
+        color: #1c595e;
+        
+        margin-top: 80px;
+        text-align: center;
+        padding-top: 30px;
+    }
+ h1.a{
+color: blanchedalmond;
+text-align: center;
+font-size: 40px;
+font-style: initial;
+text-shadow: 2px 2px 40px red;
+}
+
+
+</style>
+<script>
+    function insert(num){
+        document.form.textview.value = document.form.textview.value+num
+    }
+    function equal(){
+        var exp = document.form.textview.value
+        if(exp){
+            document.form.textview.value = eval(exp)
+        }
+    }
+    function clean(){
+        document.form.textview.value = ""
+
+    }
+    function back(){
+        var exp = document.form.textview.value
+        document.form.textview.value = exp.substring(0,exp.length-1)
+    }
+</script>
+
+</head>
+<h3 style="color:antiquewhite">Ariel Kravizki ID 039678024</h3>
+<center><h1 class="a">מחשבון</h1></center>
+<body <body style="background-image: url(c.jpg)"></body>
+<div class="bg"></div>
+<div class="main">
+    <form name="form">
+        <input class="screen" name="textview">
+    </form>
+    <table>
+        <tr>
+            <td><input class ="button" type="button" value="C" onclick="clean()"></td>
+            <td><input class ="button" type="button" value="<" onclick="back()"></td>
+            <td><input class ="button" type="button" value="/" onclick="insert('/')"></td>
+            <td><input class ="button" type="button" value="X" onclick="insert('*')"></td>
+        </tr>
+        <tr>
+            <td><input class ="button" type="button" value="7" onclick="insert(7)"></td>
+            <td><input class ="button" type="button" value="8" onclick="insert(8)"></td>
+            <td><input class ="button" type="button" value="9" onclick="insert(9)"></td>
+            <td><input class ="button" type="button" value="-" onclick="insert('-')"></td>
+        </tr>
+        <tr>
+            <td><input class ="button" type="button" value="4" onclick="insert(4)"></td>
+            <td><input class ="button" type="button" value="5" onclick="insert(5)"></td>
+            <td><input class ="button" type="button" value="6" onclick="insert(6)"></td>
+            <td><input class ="button" type="button" value="+" onclick="insert('+')"></td>
+        </tr>
+        <tr>
+            <td><input class ="button" type="button" value="1" onclick="insert(1)"></td>
+            <td><input class ="button" type="button" value="2" onclick="insert(2)"></td>
+            <td><input class ="button" type="button" value="3" onclick="insert(3)"></td>
+            <td rowspan=5><input class ="button" style="height:106" type="button" value="=" onclick="equal()"></td>
+        </tr>
+        <tr>
+            <td colspan=2><input class ="button" style="width:106" type="button" value="0" onclick="insert(0)"></td>
+            <td><input class ="button" type="button" value="." onclick="insert('.')"></td>
+        </tr>
+    </table>
+</center>
+</div>
+</body>
+</html>
