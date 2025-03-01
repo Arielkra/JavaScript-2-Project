@@ -30,7 +30,7 @@
  }
  if(Agentina==false && France == false && germany==false && israel==false){
  
- return alert('!בבקשה בחר מדינה');
+ return alert('please select The Country : ');
  }
  else{
  return true;
@@ -42,12 +42,12 @@
 </head>
 <body>
 <form  method="get" onsubmit="return isChecked();">
- <h1 class="a"><u> : סמן בקוביה את הדגל ולחץ למטה ללימוד</u></h1>
+ <h1 class="a"><u>Mark the flag on the cube and click below to learn : </u></h1>
  <h3 class="a">Argentina</h3><input type="checkbox" name="countries" value="Argentina" id="Argentina"><br/><br/><br/>
  <h3 class="a">France</h3><input type="checkbox" name="countries" value="France" id="France"/><br/><br/><br/>
  <h3 class="a">germany</h3><input type="checkbox" name="countries" value="germany" id="germany"/><br/><br/><br/>
  <h3 class="a">israel</h3><input type="checkbox" name="countries" value="israel" id="israel"/><br/><br/><br/>
- <button class="b"  onclick="isChecked()">!לחץ כאן למעבר ללימוד הדגל</button>
+ <button class="b"  onclick="isChecked()">Click here to go to the flag study!</button>
 </form>
 
 
@@ -89,8 +89,8 @@ i++;
 
 
 var flag = ["argentina", "france", "germany","israel","italy","rasha","spain"];
-var flag2=[" מדינה : ארגנטינה " ," מדינה : צרפת"," מדינה : גרמניה","מדינה : ישראל","מדינה : איטליה","מדינה : רוסיה","מדינה :ספרד"];
-var flag3=["עיר בעירה : בואנס איירס","עיר בירה : פריז","עיר בירה : ברלין","עיר בירה : ירושלים","עיר בירה : רומא","עיר בירה : מוסקבה","עיר בירה : מדריד"];
+     var flag2 = [" Contry : Argentina ", " Contry : Franch", " Contry : Germany", "Contry : Israel", "Contry : Italy","Contry : רוסיה","Contry :Spain"];
+     var flag3 = ["capital : Buenos Aires", "capital : Paris", "capital : Berlin", "capital : Jerusalem", "capital : Rome", "capital : מוסקבה","Capital : Madrid"];
  document.getElementById('myflag').src=flag[i] + ".jpg";
   document.getElementById("demo1").innerHTML = flag2[i];
   document.getElementById("demo2").innerHTML = flag3[i];
@@ -127,46 +127,45 @@ i=-1;
     font-style: initial;
     text-shadow: 2px 2px 40px rgb(255, 230, 0);
    }
-   .screen {
+    .screen {
         width: 300px;
         height: 40px;
         font-size: 30px;
         background: blanchedalmond;
         border-radius: 6px;
-        box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2); 
+        box-shadow: inset 0px 4px rgba(0, 0, 0, 0.2);
         font-size: 21px;
         line-height: 60px;
         color: black;
-		    font-style: inherit;
+        font-style: initial;
         border-style: solid;
         text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
         text-align: right;
         letter-spacing: 1px;
         border-radius: 10px;
-        
     }
 </style>
 <hr>
 <br>
 <br>
-<h1 class="a"><u> : לחץ על כפתור למטה ולמד ערי בירה</u></h1>
-<h3 class="a" id="demo1"> מדינה : ארגנטינה </h3>
-<h3 class="a" id="demo2">עיר בירה : בואנוס איירס </h3>
+<h1 class="a"><u> Click the button below and learn about capital cities : </u></h1>
+<h3 class="a" id="demo1"> Country : Argentina </h3>
+<h3 class="a" id="demo2">Capital : Buenos Aires </h3>
 <img id="myflag" src="argentina.jpg" style="width:150px height:150px">
 <br>
 <br>
-<button class="b"  onclick="mycountry()">!ללמידה ערי בירה לחץ כאן</button>
+<button class="b" onclick="mycountry()">To learn capital cities click here!</button>
 <br>
 <hr>
-<h1 class="a"><u>(argentina, france, germany, israel, italy, rasha, spain : הקלד אחד מהמדינות והדגל יוצג (הדגלים המשתתפים הם</u></h1>
+<h1 class="a"><u>(Type one of the countries and the flag will be displayed - the participating flags are : argentina, france, germany, israel, italy, rasha, spain</u></h1>
 
-<button class="b" type="button"  onclick="clean()">ניקוי תוכן</button>
-<button class="b" onclick="mypicture()">לחץ כאן להצגת הדגל</button> 
+<button class="b" type="button" onclick="clean()">Content cleaning</button>
+<button class="b" onclick="mypicture()">Click here to display the flag</button> 
 <br>
 <br>
 <img id="myImage" src="" style="width:150px height:150px">
 <form name="form">
-<h3 class="a" >הקלד כאן את שם המדינה</h1><input class="screen" type="text" id="str1" name="str1" >
+    <h3 class="a">Type the country name here</h1><input class="screen" type="text" id="str1" name="str1">
 </center>
 </html>
    </body>
